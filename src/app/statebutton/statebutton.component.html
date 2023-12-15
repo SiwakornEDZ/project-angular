@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple State Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+    }
+
+    button {
+      font-size: 16px;
+      padding: 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <p>Count: <span id="count">0</span></p>
+    <button onclick="increment()">Increment</button>
+  </div>
+
+  <script>
+    let count = 0;
+    function updateCount() {
+      document.getElementById('count').innerText = count;
+    }
+
+    function increment() {
+      count++;
+      updateCount();
+    }
+  </script>
+
+</body>
+</html>
